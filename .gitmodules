@@ -1,0 +1,3 @@
+[submodule "shared/4844-testnet"]
+	path = shared/4844-testnet
+	url = https://github.com/ethpandaops/4844-testnet.git

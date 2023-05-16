@@ -1,0 +1,22 @@
+version: '3.3'
+services:
+  beacon:
+    build:
+      context: ./lighthouse/build
+      args:
+        BASE_IMAGE:  'ethdreamer/lighthouse:backfill-4844'
+        PROCESS_UID: 1000
+        PROCESS_GID: 1000
+    environment:
+      - ETH_TESTNET
+      - CONSENSUS_DISC
+    ports:
+      - "${CONSENSUS_DISC}:${CONSENSUS_DISC}/tcp"
+      - "${CONSENSUS_DISC}:${CONSENSUS_DISC}/udp"
+      - "127.0.0.1:5052:5052"
+    volumes:
+      - ./lighthouse/beacon/run:/home/consensus/run
+      - ./shared:/shared
+    depends_on:
+      - execution
+
