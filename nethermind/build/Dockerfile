@@ -1,4 +1,4 @@
-FROM nethermindeth/nethermind:eip-4844-v5
+FROM nethermindeth/nethermind:eip-4844-v6
 
 USER root
 RUN apt update && apt install -y tini dnsutils

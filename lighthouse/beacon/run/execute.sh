@@ -22,9 +22,10 @@ if [ -e $BOOTFILE ]; then
     BOOT_ARG="--boot-nodes=$(cat $BOOTFILE | tr '\n' ',' | sed 's/,\s*$//')"
 fi
 
+
 echo "******************** STARTING LIGHTHOUSE BEACON NODE ********************"
 
-exec lighthouse \
+echo lighthouse \
     --log-color \
     --debug-level=info \
     --datadir ./datadir \
@@ -44,4 +45,4 @@ exec lighthouse \
     --execution-endpoint=$EE_TARGET \
     $BUILDER_ARG
 
-
+sleep infinity

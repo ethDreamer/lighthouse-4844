@@ -1,10 +1,10 @@
 #!/bin/bash
 
-export ETH_TESTNET=devnet-5
+export ETH_TESTNET=devnet-6
 
 export EXECUTION_NODE=nethermind # can be [besu|nethermind]
-export CONSENSUS_DISC=9003  # discovery TCP/UDP port open to internet for lighthouse
-export EXECUTION_DISC=30306 # discovery TCP/UDP port open to internet for execution node
+export CONSENSUS_DISC=9004  # discovery TCP/UDP port open to internet for lighthouse
+export EXECUTION_DISC=30307 # discovery TCP/UDP port open to internet for execution node
 
 # metrics settings
 export PROMETHEUS_PORT=9090 # port to serve prometheus front-end
