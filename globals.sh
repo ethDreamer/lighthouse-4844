@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export ETH_TESTNET=devnet-5
+export ETH_TESTNET=devnet-8
 
 export EXECUTION_NODE=nethermind # can be [besu|nethermind]
 export CONSENSUS_DISC=9003  # discovery TCP/UDP port open to internet for lighthouse

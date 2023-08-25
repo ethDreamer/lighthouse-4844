@@ -1,7 +1,7 @@
-FROM nethermindeth/nethermind:eip-4844-v5
+FROM nethermindeth/nethermind:cancun
 
 USER root
-RUN apt update && apt install -y tini dnsutils
+RUN apt update && apt install -y tini dnsutils jq curl
 
 ARG PROCESS_UID
 ARG PROCESS_GID

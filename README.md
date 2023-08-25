@@ -26,6 +26,11 @@ After editing these be sure to run:
 source ./globals.sh
 ```
 
+Also ensure you generate the jwt token:
+```
+./gen-jwt.sh
+```
+
 #### Start the nodes
 
 To enable only the base (consensus/execution/validator) nodes, simply run:

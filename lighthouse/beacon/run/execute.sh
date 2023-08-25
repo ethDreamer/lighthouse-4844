@@ -30,7 +30,6 @@ exec lighthouse \
     --datadir ./datadir \
     --testnet-dir=$TESTNET_DIR \
     beacon \
-    --disable-enr-auto-update \
     --eth1 \
     $BOOT_ARG \
     --http \
@@ -42,6 +41,8 @@ exec lighthouse \
     $(printf '%s' "$METRICS_ARG") \
     --execution-jwt=/shared/jwt.secret \
     --execution-endpoint=$EE_TARGET \
+    --self-limiter=blob_sidecars_by_range:256/10 \
+    --disable-peer-scoring \
     $BUILDER_ARG
 
 
