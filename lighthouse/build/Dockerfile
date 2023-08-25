@@ -2,7 +2,7 @@ ARG BASE_IMAGE
 FROM ${BASE_IMAGE}
 
 USER root
-RUN apt update && apt install -y tini
+RUN apt update && apt install -y tini jq
 
 ARG PROCESS_UID
 ARG PROCESS_GID

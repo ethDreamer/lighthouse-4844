@@ -14,10 +14,12 @@ fi
 
 echo "******************** STARTING NETHERMIND ********************"
 
-exec /nethermind/Nethermind.Runner \
+
+exec /nethermind/nethermind \
     --config=none.cfg \
     --Init.ChainSpecPath=${TESTNET_DIR}/chainspec.json \
     --Init.IsMining=false \
+    --Pruning.Mode=None \
     --datadir="./datadir" \
     --JsonRpc.Enabled=true \
     --JsonRpc.EnabledModules="net,eth,consensus,subscribe,web3,admin,rpc,parity" \
