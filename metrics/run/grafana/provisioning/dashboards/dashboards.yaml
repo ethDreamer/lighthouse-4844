@@ -1,0 +1,10 @@
+apiVersion: 1
+
+providers:
+  - name: dashboards
+    type: file
+    updateIntervalSeconds: 15
+    allowUiUpdates: true
+    options:
+      path: /home/grafuser/run/dashboards
+      foldersFromFilesStructure: true
