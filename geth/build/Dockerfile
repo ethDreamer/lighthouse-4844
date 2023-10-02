@@ -1,4 +1,4 @@
-FROM ethpandaops/geth:lightclient-devnet-8-edf4ab3
+FROM ethpandaops/geth:lightclient-devnet-9-ae44519
 
 USER root
 

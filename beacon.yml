@@ -4,7 +4,7 @@ services:
     build:
       context: ./lighthouse/build
       args:
-        BASE_IMAGE:  'ethdreamer/lighthouse:deneb-1db739'
+        BASE_IMAGE:  'ethdreamer/lighthouse:devnet-9'
         PROCESS_UID: 1000
         PROCESS_GID: 1000
     environment:
