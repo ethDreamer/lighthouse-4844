@@ -4,7 +4,7 @@ services:
     build:
       context: ./lighthouse/build
       args:
-        BASE_IMAGE:  'ethdreamer/lighthouse:devnet-9'
+        BASE_IMAGE:  'sigp/lighthouse:latest-unstable'
         PROCESS_UID: 1000
         PROCESS_GID: 1000
     environment:
