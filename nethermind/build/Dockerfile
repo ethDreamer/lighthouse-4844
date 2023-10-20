@@ -1,4 +1,4 @@
-FROM nethermindeth/nethermind:cancun
+FROM nethermindeth/nethermind:cancun-ae8950a
 
 USER root
 RUN apt update && apt install -y tini dnsutils jq curl
