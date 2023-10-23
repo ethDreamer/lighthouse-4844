@@ -9,7 +9,10 @@ services:
     environment:
       - PROXY_ENABLED=true
   proxy:
-    build: ./proxy
+    container_name: "${CONTAINER_PREFIX}_proxy"
+    image: "${IMAGE_PREFIX}-proxy"
+    build:
+      context: ./proxy
     expose:
       - 8560
     volumes:

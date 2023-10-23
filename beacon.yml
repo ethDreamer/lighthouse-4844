@@ -1,12 +1,14 @@
 version: '3.3'
 services:
   beacon:
+    container_name: "${CONTAINER_PREFIX}_beacon"
+    image: "${IMAGE_PREFIX}-beacon"
     build:
       context: ./lighthouse/build
       args:
         BASE_IMAGE:  'sigp/lighthouse:latest-unstable'
-        PROCESS_UID: 1000
-        PROCESS_GID: 1000
+        PROCESS_UID: $BEACON_UID
+        PROCESS_GID: $BEACON_GID
     environment:
       - ETH_TESTNET
       - CONSENSUS_DISC
