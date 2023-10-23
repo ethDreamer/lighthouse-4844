@@ -1,11 +1,13 @@
 version: '3.3'
 services:
   execution:
+    container_name: "${CONTAINER_PREFIX}_execution"
+    image: "${IMAGE_PREFIX}-execution"
     build:
       context: ./${EXECUTION_NODE}/build
       args:
-        PROCESS_UID: 1000
-        PROCESS_GID: 1000
+        PROCESS_UID: $EXECUTION_UID
+        PROCESS_GID: $EXECUTION_GID
     environment:
       - EXECUTION_DISC
       - ETH_TESTNET

@@ -11,12 +11,14 @@ services:
     expose:
       - 6060
   prometheus:
+    container_name: "${CONTAINER_PREFIX}_prometheus"
+    image: "${IMAGE_PREFIX}-prometheus"
     build:
       context: ./metrics/build/prometheus
       args:
         BASE_IMAGE:  'prom/prometheus'
-        PROCESS_UID: 1000
-        PROCESS_GID: 1000
+        PROCESS_UID: $METRICS_UID
+        PROCESS_GID: $METRICS_GID
     ports:
       - "127.0.0.1:${PROMETHEUS_PORT}:9090/tcp"
     expose:
@@ -27,12 +29,14 @@ services:
       - execution
       - beacon
   grafana:
+    container_name: "${CONTAINER_PREFIX}_grafana"
+    image: "${IMAGE_PREFIX}-grafana"
     build:
       context: ./metrics/build/grafana
       args:
         BASE_IMAGE:  'grafana/grafana'
-        PROCESS_UID: 1000
-        PROCESS_GID: 1000
+        PROCESS_UID: $METRICS_UID
+        PROCESS_GID: $METRICS_GID
     ports:
       - "127.0.0.1:${GRAFANA_PORT}:3000/tcp"
     environment:
