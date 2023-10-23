@@ -18,7 +18,7 @@ cd lighthouse-4844 && git submodule update --remote
 
 The default variables that must be set correctly before starting the containers are:
 
-- `ETH2_TESTNET`   # the name of the testnet directory to use (see directories in `./shared/4844-testnet`)
+- `ETH_TESTNET`    # the name of the testnet directory to use (see directories in `./shared/4844-testnet/network-configs`)
 - `EXECUTION_NODE` # pick between geth, nethermind, or ~~besu~~
 - `CONSENSUS_DISC` # the discovery port (TCP/UDP) for lighthouse (should be accessible from internet)
 - `EXECUTION_DISC` # the discovery port (TCP/UDP) for execution node (should be accessible from internet)
