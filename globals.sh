@@ -1,8 +1,8 @@
 #!/bin/bash
 
-export ETH_TESTNET=devnet-9
+export ETH_TESTNET=devnet-10
 
-export EXECUTION_NODE=geth # can be [geth|nethermind]
+export EXECUTION_NODE=nethermind # can be [geth|nethermind]
 export CONSENSUS_DISC=9003  # discovery TCP/UDP port open to internet for lighthouse
 export EXECUTION_DISC=30306 # discovery TCP/UDP port open to internet for execution node
 
@@ -46,6 +46,10 @@ check_permissions() {
   local user_gid=$2
   local directory=$3
   local context=$4
+
+  if [ "$user_uid" -eq "0" ]; then
+    return
+  fi
 
   if [ ! -d "$directory" ]; then
     echo "WARNING: $context - Directory $directory does not exist."
