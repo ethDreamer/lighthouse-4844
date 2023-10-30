@@ -2,7 +2,7 @@
 
 export ETH_TESTNET=devnet-10
 
-export EXECUTION_NODE=nethermind # can be [geth|nethermind]
+export EXECUTION_NODE=geth # can be [geth|nethermind|besu]
 export CONSENSUS_DISC=9003  # discovery TCP/UDP port open to internet for lighthouse
 export EXECUTION_DISC=30306 # discovery TCP/UDP port open to internet for execution node
 
