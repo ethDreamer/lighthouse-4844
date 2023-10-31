@@ -8,6 +8,9 @@ services:
       args:
         PROCESS_UID: $EXECUTION_UID
         PROCESS_GID: $EXECUTION_GID
+        GETH_IMAGE: $GETH_IMAGE
+        BESU_IMAGE: $BESU_IMAGE
+        NETHERMIND_IMAGE: $NETHERMIND_IMAGE
     environment:
       - EXECUTION_DISC
       - ETH_TESTNET

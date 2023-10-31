@@ -1,4 +1,5 @@
-FROM ethpandaops/geth:lightclient-devnet-9-6e6c723
+ARG GETH_IMAGE
+FROM ${GETH_IMAGE}
 
 USER root
 

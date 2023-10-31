@@ -2,7 +2,7 @@
 
 export ETH_TESTNET=devnet-11
 
-export EXECUTION_NODE=besu # can be [geth|nethermind|besu]
+export EXECUTION_NODE=nethermind # can be [geth|nethermind|besu]
 export CONSENSUS_DISC=9003  # discovery TCP/UDP port open to internet for lighthouse
 export EXECUTION_DISC=30306 # discovery TCP/UDP port open to internet for execution node
 
@@ -15,6 +15,12 @@ export GRAFANA_PORT=3000    # port to serve grafana front-end
 # if ETH_TESTNET is "devnet-9", the default prefix will be "devnet9"
 export IMAGE_PREFIX="${ETH_TESTNET//-/}"
 export CONTAINER_PREFIX="${ETH_TESTNET//-/}"
+
+# docker images
+export LIGHTHOUSE_IMAGE=ethdreamer/lighthouse:deneb-sync-fix
+export GETH_IMAGE=ethpandaops/geth:lightclient-devnet-9-6e6c723
+export BESU_IMAGE=hyperledger/besu:develop
+export NETHERMIND_IMAGE=nethermindeth/nethermind:fix-blobs
 
 # permissions
 #
