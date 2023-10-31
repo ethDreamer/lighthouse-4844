@@ -19,7 +19,7 @@ fi
 
 BOOTFILE=${TESTNET_DIR}/bootstrap_nodes.txt
 if [ -e $BOOTFILE ]; then
-    BOOT_ARG="--boot-nodes=$(cat $BOOTFILE | tr '\n' ',' | sed 's/,\s*$//')"
+    BOOT_ARG="--boot-nodes=$(shuf -n 10 $BOOTFILE | tr '\n' ',' | sed 's/,\s*$//')"
 fi
 
 echo "******************** STARTING LIGHTHOUSE BEACON NODE ********************"
