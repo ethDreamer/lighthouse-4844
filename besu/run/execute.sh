@@ -7,7 +7,7 @@ if [ -e $BOOTFILE ]; then
     BOOT_ARG="--bootnodes=$(cat $BOOTFILE | tr '\n' ',' | sed 's/,\s*$//')"
 fi
 
-GENFILE=${TESTNET_DIR}/genesis.json
+GENFILE=${TESTNET_DIR}/besu.json
 if [ -e $GENFILE ]; then
     NET_ARG="--network-id=$(cat $GENFILE | grep chainId | awk '{ print $2 }' | sed 's/,//g')"
     GEN_ARG="--genesis-file=$GENFILE"
