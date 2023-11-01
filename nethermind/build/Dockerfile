@@ -1,4 +1,5 @@
-FROM nethermindeth/nethermind:cancun-ae8950a
+ARG NETHERMIND_IMAGE
+FROM ${NETHERMIND_IMAGE}
 
 USER root
 RUN apt update && apt install -y tini dnsutils jq curl

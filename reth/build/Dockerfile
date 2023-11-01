@@ -1,5 +1,5 @@
-ARG BESU_IMAGE
-FROM ${BESU_IMAGE}
+ARG RETH_IMAGE
+FROM ${RETH_IMAGE}
 
 USER root
 RUN apt update && apt install -y tini dnsutils
