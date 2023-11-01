@@ -2,9 +2,9 @@
 
 export ETH_TESTNET=devnet-11
 
-export EXECUTION_NODE=nethermind # can be [geth|nethermind|besu]
-export CONSENSUS_DISC=9003  # discovery TCP/UDP port open to internet for lighthouse
-export EXECUTION_DISC=30306 # discovery TCP/UDP port open to internet for execution node
+export EXECUTION_NODE=besu # can be [geth|nethermind|besu|reth]
+export CONSENSUS_DISC=9000  # discovery TCP/UDP port open to internet for lighthouse
+export EXECUTION_DISC=30303 # discovery TCP/UDP port open to internet for execution node
 
 # metrics settings
 export PROMETHEUS_PORT=9090 # port to serve prometheus front-end
@@ -18,9 +18,10 @@ export CONTAINER_PREFIX="${ETH_TESTNET//-/}"
 
 # docker images
 export LIGHTHOUSE_IMAGE=ethdreamer/lighthouse:deneb-sync-fix
-export GETH_IMAGE=ethpandaops/geth:lightclient-devnet-9-6e6c723
+export GETH_IMAGE=ethpandaops/geth:lightclient-devnet-10-4d161de
 export BESU_IMAGE=hyperledger/besu:develop
-export NETHERMIND_IMAGE=nethermindeth/nethermind:fix-blobs
+export NETHERMIND_IMAGE=ethpandaops/nethermind:master-4847b06
+export RETH_IMAGE=ethdreamer/reth:main-e0276d2
 
 # permissions
 #

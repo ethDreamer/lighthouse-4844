@@ -28,7 +28,6 @@ exec /nethermind/nethermind \
     --Network.DiscoveryPort=${EXECUTION_DISC} \
     --Network.P2PPort=${EXECUTION_DISC} \
     --JsonRpc.JwtSecretFile=/shared/jwt.secret \
-    --Sync.SnapSync=true \
     --Mev.Enabled=true \
     --JsonRpc.AdditionalRpcUrls="http://0.0.0.0:8560|http;ws|engine;eth;net;subscribe;web3;client;parity" \
     $BOOTARG \

@@ -42,6 +42,8 @@ exec besu \
     --data-storage-format="BONSAI" \
     --kzg-trusted-setup=$TESTNET_DIR/trusted_setup.txt \
     --logging=INFO \
+    --color-enabled \
+    --pruning-enabled \
     --Xfilter-on-enr-fork-id=true \
 
 
