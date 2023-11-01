@@ -11,6 +11,7 @@ services:
         GETH_IMAGE: $GETH_IMAGE
         BESU_IMAGE: $BESU_IMAGE
         NETHERMIND_IMAGE: $NETHERMIND_IMAGE
+        RETH_IMAGE: $RETH_IMAGE
     environment:
       - EXECUTION_DISC
       - ETH_TESTNET
