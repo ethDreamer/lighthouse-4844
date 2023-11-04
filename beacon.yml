@@ -6,7 +6,7 @@ services:
     build:
       context: ./lighthouse/build
       args:
-        BASE_IMAGE:  'ethdreamer/lighthouse:deneb-sync-fix'
+        BASE_IMAGE:  $LIGHTHOUSE_IMAGE
         PROCESS_UID: $BEACON_UID
         PROCESS_GID: $BEACON_GID
     environment:
