@@ -12,9 +12,8 @@ RUN if ! grep -q ":x:${PROCESS_GID}:" /etc/group; then \
 fi
 
 RUN if ! grep -q ":x:${PROCESS_UID}:" /etc/passwd; then \
-  adduser -u ${PROCESS_UID} -G ${USER} -h /home/${USER} -s /bin/sh -D ${USER}; \
-fi
-
+        adduser -u ${PROCESS_UID} -G $(awk -F: "\$3 == ${PROCESS_GID} { print \$1 }" /etc/group) -h /home/${USER} -s /bin/sh -D ${USER}; \
+    fi
 
 WORKDIR /home/${USER}/run
 RUN chown -R ${PROCESS_UID}:${PROCESS_GID} /home/${USER}
