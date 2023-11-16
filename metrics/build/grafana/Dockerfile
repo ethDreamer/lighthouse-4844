@@ -8,7 +8,7 @@ ARG PROCESS_GID
 ARG USER=grafuser
 
 RUN getent group ${PROCESS_GID}  || addgroup -S ${USER} -g ${PROCESS_GID}
-RUN getent passwd ${PROCESS_UID} || adduser  -S ${USER} -G ${USER} -u ${PROCESS_UID}
+RUN getent passwd ${PROCESS_UID} || adduser  -S ${USER} -G `getent group ${PROCESS_GID} | cut -d: -f1` -u ${PROCESS_UID}
 
 RUN mkdir /tmp/grafold/
 RUN mv /etc/grafana/provisioning /tmp/grafold && mv /etc/grafana/grafana.ini /tmp/grafold
