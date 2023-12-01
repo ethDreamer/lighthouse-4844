@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export ETH_TESTNET=devnet-11
+export ETH_TESTNET=devnet-12
 
 export EXECUTION_NODE=nethermind # can be [geth|nethermind|besu|reth]
 export CONSENSUS_DISC=9000  # discovery TCP/UDP port open to internet for lighthouse
@@ -17,11 +17,11 @@ export IMAGE_PREFIX="${ETH_TESTNET//-/}"
 export CONTAINER_PREFIX="${ETH_TESTNET//-/}"
 
 # docker images
-export LIGHTHOUSE_IMAGE=sigp/lighthouse:latest-unstable
-export GETH_IMAGE=ethpandaops/geth:lightclient-devnet-10-4d161de
-export BESU_IMAGE=hyperledger/besu:develop
-export NETHERMIND_IMAGE=ethpandaops/nethermind:master-4847b06
-export RETH_IMAGE=ethdreamer/reth:main-e0276d2
+export LIGHTHOUSE_IMAGE=ethpandaops/lighthouse:sidecar-inclusion-proof-e5a0e2c
+export GETH_IMAGE=ethpandaops/geth:master-5b57727
+export BESU_IMAGE=ethpandaops/besu:main-be5cc68
+export NETHERMIND_IMAGE=ethpandaops/nethermind:master-dcec565
+export RETH_IMAGE=ethpandaops/reth:main-471c28e
 
 # permissions
 #
