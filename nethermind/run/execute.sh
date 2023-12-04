@@ -30,6 +30,9 @@ exec /nethermind/nethermind \
     --JsonRpc.JwtSecretFile=/shared/jwt.secret \
     --Mev.Enabled=true \
     --JsonRpc.AdditionalRpcUrls="http://0.0.0.0:8560|http;ws|engine;eth;net;subscribe;web3;client;parity" \
+    --TxPool.BlobSupportEnabled=true \
+    --TxPool.PersistentBlobStorageEnabled=true \
+    --TxPool.ReportMinutes=5 \
     $BOOTARG \
     $METRICS_ARG
 
